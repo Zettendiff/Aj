@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="collection-upper">
+    <div class="collection-upper-content">
+        <h1>Featured Products</h1>
+        <p>Discover premium selections handpicked by specialists.</p>
+    </div>
+</div>
+<div class="home-section2">
+    <div class="section-cntr">
+        <div class="card-cntr">
+            <div class="card">
+                <div class="desc">
+                    <h1 class="product-name">Most Picked Outlooks</h1>
+                    <span class="product-price">View All</span>
+                </div>
+                <img src="{% static 'images/black1.jpg' %}" alt="">
+            </div>
+            <div class="card">
+                <div class="desc">
+                    <h1 class="product-name">Most Picked Outlooks</h1>
+                    <span class="product-price">View All</span>
+                </div>
+                <img src="{% static 'images/blue2.jpg' %}" alt="">
+            </div>
+            <div class="card">
+                <div class="desc">
+                    <h1 class="product-name">Most Picked Outlooks</h1>
+                    <span class="product-price">View All</span>
+                </div>
+                <img src="{% static 'images/jersey3.jpg' %}" alt="">
+            </div>
+            <div class="card">
+                <div class="desc">
+                    <h1 class="product-name">Most Picked Outlookss</h1>
+                    <span class="product-price">View All</span>
+                </div>
+                <img src="{% static 'images/red4.jpg' %}" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

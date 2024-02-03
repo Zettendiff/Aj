@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="{% static 'images/UNDD.jpg' %}">
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>UND Clothing</title>
+</head>
+<body>
+    <header>
+        <div class="header-cntr">
+            <div id="upper-header" class="upper-header">
+                <div class="logo">
+                    <a href="{% url 'home' %}">UND <span>clothing</span></a>
+                </div>
+                <div class="auth-cntr">
+                    <!-- <a href="{% url 'login' %}" class="header-login">Login</a>
+                    <a href="{% url 'signup' %}" class="header-signup">Sign Up</a> -->
+                    <a href="{% url 'product_list' %}" class="text-white px-4 py-2 border border-gray-300">Manage Products</a>
+                </div>
+            </div>
+            <div class="lower-header">
+                <div class="lower-cntr">
+                    <ul>
+                        <li>
+                            <a href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'about' %}">About</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'contact' %}">Contact</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'collections' %}">Collections</a>
+                        </li>
+                    </ul>
+                    <div id="lower-auth-cntr" class="auth-cntr">
+                        <!-- <a href="{% url 'login' %}" class="header-login">Login</a>
+                        <a href="{% url 'signup' %}" class="header-signup">Sign Up</a> -->
+                        <a href="{% url 'product_list' %}" class="text-white px-4 py-2 border border-gray-300">Manage Products</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        window.onscroll = function() {scrollFunction()};
+    
+        function scrollFunction() {
+            const header = document.getElementById('upper-header');
+            const lowerAuthCntr = document.getElementById('lower-auth-cntr');
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                header.classList.remove('upper-header');
+                header.classList.add('remove-upper-header');
+                lowerAuthCntr.style.display = 'flex';
+            } else {
+                header.classList.add('upper-header');
+                header.classList.remove('remove-upper-header');
+                lowerAuthCntr.style.display = 'none';
+            }
+        }
+    </script>
+
+    <main>
+        {% block content %}
+        {% endblock content %}
+    </main>
+
+    <footer>
+        <div class="footer-cntr">
+            <div class="footer-logo">
+                <a href="{% url 'home' %}">UND <span>Clothing</span></a>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li>
+                        <a href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'about' %}">About</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li>
+                        <a href="{% url 'contact' %}">Contact</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'collections' %}">Collections</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <ul>
+                    <li>
+                        <a href="">
+                            <i class='bx bxl-facebook'></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class='bx bxl-instagram'></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class='bx bxl-twitter'></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

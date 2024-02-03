@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="{% static 'images/UNDD.jpg' %}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>UND CLOTHING</title>
+</head>
+<body>
+    <header class="bg-black">
+        <div class="w-full max-w-[1400px] mx-auto flex items-center justify-between py-4">
+            <div>
+                <h1 class="text-2xl font-bold text-white">UND <span class="font-medium text-lg">Clothing</span></h1>
+            </div>
+            <div class="text-white flex items-center space-x-4">
+                <a href="{% url 'home' %}" class="px-4 py-2 hover:bg-white hover:text-black">Home</a>
+                <a href="{% url 'about' %}" class="px-4 py-2 hover:bg-white hover:text-black">About</a>
+                <a href="{% url 'contact' %}" class="px-4 py-2 hover:bg-white hover:text-black">Contact</a>
+                <a href="{% url 'collections' %}" class="px-4 py-2 hover:bg-white hover:text-black">Collections</a>
+            </div>
+            <div class="flex items-center space-x-2">
+                <span class="text-white">Torres</span>
+                <img src="{% static 'images/heyhey.jpg' %}" alt="" class="w-10 h-10 rounded-full">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    
+</body>
+</html>

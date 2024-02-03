@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="home-cntr">
+        <div class="home-content">
+            <h1> Married <span>to the</span> Game</h1>
+            <p>The motivated, the first to come and the last to go out</p>
+            <a href="{% url 'collections' %}" class="home-btn">Explore</a>
+        </div>
+    </div>
+    <div class="home-section">
+        <div class="section-cntr">
+            <div class="card-cntr">
+                <div class="card">
+                    <img src="{% static 'images/black1.jpg' %}" alt="">
+                    <div class="desc">
+                        <h1 class="product-name">Product Name</h1>
+                        <span class="product-price">₱500.00</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="{% static 'images/blue2.jpg' %}" alt="">
+                    <div class="desc">
+                        <h1 class="product-name">Product Name</h1>
+                        <span class="product-price">₱500.00</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="{% static 'images/jersey3.jpg' %}" alt="">
+                    <div class="desc">
+                        <h1 class="product-name">Product Name</h1>
+                        <span class="product-price">₱500.00</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="{% static 'images/red4.jpg' %}" alt="">
+                    <div class="desc">
+                        <h1 class="product-name">Product Name</h1>
+                        <span class="product-price">₱500.00</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="{% static 'images/violet5.jpg' %}" alt="">
+                    <div class="desc">
+                        <h1 class="product-name">Product Name</h1>
+                        <span class="product-price">₱500.00</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="{% static 'images/white6.jpg' %}" alt="">
+                    <div class="desc">
+                        <h1 class="product-name">Product Name</h1>
+                        <span class="product-price">₱500.00</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="{% static 'images/brown7.jpg' %}" alt="">
+                    <div class="desc">
+                        <h1 class="product-name">Product Name</h1>
+                        <span class="product-price">₱500.00</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="{% static 'images/yellow8.jpg' %}" alt="">
+                    <div class="desc">
+                        <h1 class="product-name">Product Name</h1>
+                        <span class="product-price">₱500.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="home-section2">
+        <div class="section-cntr">
+            <div class="card-cntr">
+                <div class="card">
+                    <div class="desc">
+                        <h1 class="product-name">Most Picked Outlooks</h1>
+                        <span class="product-price">View All</span>
+                    </div>
+                    <img src="{% static 'images/black1.jpg' %}" alt="">
+                </div>
+                <div class="card">
+                    <div class="desc">
+                        <h1 class="product-name">Product Name</h1>
+                        <span class="product-price">View All</span>
+                    </div>
+                    <img src="{% static 'images/blue2.jpg' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="home-search">
+        <div class="search-cntr">
+            <div class="search-card">
+                <h1>SEARCH</h1>
+                <div class="inner-cntr">
+                    <div class="input-cntr">
+                        <input type="text">
+                        <button>Search</button>
+                    </div>
+                    <a href="{% url 'collections' %}">Proceed to Collections</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
